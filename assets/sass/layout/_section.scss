@@ -1,0 +1,230 @@
+@use '../abstracts/variables';
+@use '../themes/fonts';
+
+
+
+.section {
+    display: flex;
+    position: relative;
+
+
+    .section__banner {
+        width: 70vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &--image {
+            height: 100%;
+            z-index: -4;
+        }
+
+        .article-banner {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: variables.$grey;
+            padding-left: 30px;
+            padding-right: 35px;
+            padding-bottom: 15px;
+            font-family: fonts.$ptmono-font;
+            z-index: -3;
+
+
+
+            &__datos--50 {
+                width: 7vw;
+                padding-right: 15px;
+            }
+
+            &__datos--20 {
+                width: 7vw;
+                padding-left: 30px;
+                padding-right: 60px;
+            }
+
+            &__datos--1000 {
+                width: 10vw;
+
+            }
+
+            &__titulo {
+                font-size: 2rem;
+                margin: 15px 0 5px 0;
+            }
+
+            @media (max-width: 768px) {
+                &__titulo {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &__descripcion {
+                display: flex;
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 768px) {
+                &__descripcion {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @media (max-width: 576px) {
+                &__descripcion {
+                    font-size: 0.6rem;
+                }
+            }
+
+
+        }
+    }
+
+    .article__brand {
+        //width: 90vw;
+
+        display: flex;
+        flex-direction: column;
+        font-family: fonts.$ptmono-font;
+        justify-content: space-between;
+
+        .article-container {
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            width: 100%;
+            justify-content: center;
+            padding-inline-start: 40px;
+
+        }
+
+        .article-title {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 40px;
+            }
+        }
+
+
+        .article-box {
+            display: flex;
+            position: relative;
+            height: 110px;
+
+            &--arrow {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: variables.$white;
+                left: -15px;
+                bottom: 15px;
+            }
+
+
+            &--orange {
+                position: absolute;
+                background-color: variables.$orange;
+                width: 90px;
+                height: 90px;
+                z-index: -1;
+                left: -15px;
+                bottom: 15px;
+
+            }
+
+            &--yellow {
+                position: absolute;
+                background-color: variables.$cat;
+                width: 90px;
+                height: 90px;
+                z-index: -2;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.section-cta {
+    display: flex;
+    flex-direction: row;
+    height: 20vw;
+    position: relative;
+    justify-content: space-between;
+
+    &__visit-us {
+        width: 25vw;
+        height: 170px;
+        font-family: fonts.$ptmono-font;
+        padding-right: 15px;
+        padding-left: 30px;
+
+        &-text {
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            &-text {
+                font-size: 9px;
+            }
+        }
+    }
+
+    &__map {
+        display: flex;
+        position: relative;
+        width: 40vw;
+
+    }
+
+    &__image--map {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background-color: variables.$custom-blue;
+        display: flex;
+        position: absolute;
+        z-index: -5;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    &__store {
+        display: flex;
+        position: relative;
+        width: 37vw;
+    }
+
+    &__image--beans {
+        width: 15vw;
+        rotate: 90deg;
+        display: flex;
+        position: absolute;
+        z-index: -4;
+        left: -7vw;
+    }
+
+    &__image--machine {
+        width: 100%;
+        height: 110%;
+        display: flex;
+        position: absolute;
+        z-index: -5;
+    }
+
+}

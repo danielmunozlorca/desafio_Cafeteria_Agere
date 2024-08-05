@@ -1,0 +1,37 @@
+@use '../themes/fonts';
+@use '../abstracts/variables';
+
+
+@mixin custom-button {
+    font-family: fonts.$ptmono-font;
+    border: 1px solid variables.$darkgrey;
+    height: 30px;
+}
+
+
+.button--light {
+    background-color: white;
+    color: variables.$darkgrey;
+    @include custom-button;
+}
+
+
+@media (max-width: 768px) {
+    .button--light {
+        width: 80px;
+        height: 35px;
+    }
+}
+
+.button--green {
+    color: variables.$white;
+    background-color: variables.$custom-green;
+    @include custom-button;
+}
+
+@media (max-width: 768px) {
+    .button--green {
+        width: 80px;
+        height: 35px;
+    }
+}
